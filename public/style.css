@@ -1,0 +1,27 @@
+body {
+  overflow-y: scroll;
+}
+/* .form_absen {
+    width: 250px;
+    height: auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    border: 0.5px solid gray;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; */
+    /* position: fixed; */
+    /* bottom: 0;
+    left: 0; */
+  /* } */
+  
+  /* .form_group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  } */
+  .contact hr{
+    border: 3px solid black;
+    margin-top: -5px;
+    width: 250px;
+  }

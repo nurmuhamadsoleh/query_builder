@@ -1,0 +1,42 @@
+<main class="container-fluid flex-center">
+    <h1 style="text-align: center; font-weight: bold; font-size: 32px;">Absensi Jvalley</h1>
+    <a href="/components/formAbsen" class="btn btn-primary mb-3">Tambahkan</a>
+  </main>
+  <main class="container-fluid flex-center">
+    <table class="siswa_list" cellpadding="5" cellspacing="5" border="2" width="100%">
+        <thead align="center" bgcolor="lightblue">
+            <tr>
+                <td>Check ID</td>
+                <td>Nama</td>
+                <td>Email</td>
+                <td>Phone</td>
+                <td>Batch</td>
+                <td>Date</td>
+                <td>Eksekusi</td>
+            </tr>
+          </thead>
+          <tbody align="center">
+              {{#each data}}
+                  <tr>
+                      <td>
+                        <input class="form-check-input" type="checkbox">{{this.id}}
+                      </td>
+                      <!-- <td>{{this.id}}</td> -->
+                      <td>{{this.nama}}</td>
+                      <td>{{this.email}}</td>
+                      <td>{{this.telepon}}</td>
+                      <td>{{this.batch}}</td>
+                      <td name="{{this.date}}" class="date" id="{{this.id}}">{{this.date}}</td>
+                      <input type="hidden" class="res_date{{this.id}}" value="{{this.date}}">
+                      <td>
+                          <form>
+                              <button type="button" class="btn btn-primary">Edit</button>
+                              <button type="reset" class="btn btn-primary">Delete</button>
+                          </form>
+                      </td>
+                  </tr>
+              {{/each}}
+          </tbody>
+    </table>
+    {{> formAbsen}}
+  </main>
